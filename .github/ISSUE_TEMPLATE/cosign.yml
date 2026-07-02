@@ -1,13 +1,13 @@
-name: "Co-sign (add handle or note)"
-description: Same adoption, with optional @handle or one-line note
-title: "Co-sign: I adopt the Hun Charter v1"
-labels: ["co-sign"]
+name: "Recorded co-sign (optional)"
+description: Individual timestamped issue — most people should comment on the co-sign ledger instead
+title: "Recorded co-sign"
 body:
   - type: markdown
     attributes:
       value: |
-        By submitting this issue, you publicly state that you adopt the Hun Charter v1 by reference.
-        Faster path: use the [one-click co-sign template](https://github.com/hun0704/hun-charter/issues/new?template=co-sign-quick.md) instead.
+        **Usual path:** comment on the [co-sign ledger (#1)](https://github.com/hun0704/hun-charter/issues/1) with: *I adopt the Hun Charter v1.*
+
+        Use this form only if you want a **separate issue** with its own timestamp.
   - type: checkboxes
     id: adopt
     attributes:
