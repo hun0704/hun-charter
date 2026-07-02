@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Co-sign (one click)
+    url: https://github.com/hun0704/hun-charter/issues/new?template=co-sign-quick.md&title=Co-sign&labels=co-sign
+    about: Pre-filled issue — sign in, then Submit
+  - name: Read the Charter
+    url: https://hun0704.github.io/hun-charter/
+    about: Charter text (typographic edition)
+  - name: Declaration (8 languages)
+    url: https://hun0704.github.io/hun-charter/declaration.html
+    about: July 4 launch post

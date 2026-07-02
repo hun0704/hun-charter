@@ -1,0 +1,33 @@
+name: "Co-sign (add handle or note)"
+description: Same adoption, with optional @handle or one-line note
+title: "Co-sign: I adopt the Hun Charter v1"
+labels: ["co-sign"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        By submitting this issue, you publicly state that you adopt the Hun Charter v1 by reference.
+        Faster path: use the [one-click co-sign template](https://github.com/hun0704/hun-charter/issues/new?template=co-sign-quick.md) instead.
+  - type: checkboxes
+    id: adopt
+    attributes:
+      label: Adoption
+      options:
+        - label: I adopt the Hun Charter v1
+          required: true
+  - type: input
+    id: handle
+    attributes:
+      label: Your name or handle (optional)
+      placeholder: e.g. @yourhandle
+      value: ""
+    validations:
+      required: false
+  - type: textarea
+    id: note
+    attributes:
+      label: Optional note
+      placeholder: e.g. Building agent tools — adopting for attribution rule.
+      value: ""
+    validations:
+      required: false

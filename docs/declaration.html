@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Declaration · Hun Charter v1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="charter.css">
+</head>
+<body>
+  <header class="mast">
+    <p class="kicker">July 4, 2026</p>
+    <h1>Declaration of Digital Self-Determination</h1>
+    <p class="lede">Eight languages · same co-sign</p>
+    <nav class="actions">
+      <a class="btn primary" href="https://github.com/hun0704/hun-charter/issues/new?template=co-sign-quick.md&title=Co-sign&labels=co-sign">Co-sign</a>
+      <a class="btn" href="./">Charter text</a>
+      <a class="btn" href="https://github.com/hun0704/hun-charter/blob/main/CHARTER-v1.md">GitHub</a>
+    </nav>
+  </header>
+  <main id="declaration" class="charter-body" aria-busy="true">
+    <p class="loading">Loading declaration…</p>
+  </main>
+  <footer class="site-foot">
+    <p>Cha11 · Hun Charter v1</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    marked.setOptions({ mangle: false, headerIds: true });
+    fetch("./declaration.md")
+      .then(r => r.text())
+      .then(md => {
+        document.getElementById("declaration").innerHTML = marked.parse(md);
+        document.getElementById("declaration").removeAttribute("aria-busy");
+      })
+      .catch(() => {
+        document.getElementById("declaration").innerHTML =
+          '<p>Could not load. <a href="https://github.com/hun0704/hun-charter/blob/main/DECLARATION-2026-07-04.md">Read on GitHub</a>.</p>';
+      });
+  </script>
+</body>
+</html>
